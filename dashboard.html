@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Inżynierski | Qeoresearch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        // Szybka ochrona przed niezalogowanym dostępem przed załadowaniem DOM
+        if (localStorage.getItem('qeoresearch_auth') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Qeoresearch <span class="accent">Panel</span></div>
+            <nav>
+                <span class="user-badge">Witaj, <strong id="user-display">Hank</strong></span>
+                <button id="logout-btn" class="btn-secondary">Wyloguj</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-grid">
+            <div class="card bg-dark">
+                <h3>Status projektu #9</h3>
+                <p>Status: <span class="status-indicator active">Aktywny (Produkcja)</span></p>
+                <p>Silnik: <strong>Micrograd JS v0.1.0</strong></p>
+            </div>
+            
+            <div class="card">
+                <h3>Metryki Silnika</h3>
+                <ul>
+                    <li>Czas propagacji wstecznej: <span class="accent">&lt; 1ms</span></li>
+                    <li>Obsługiwane operacje: <code>+</code>, <code>*</code>, <code>ReLU</code></li>
+                    <li>Precyzja: 64-bit Floating Point</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
