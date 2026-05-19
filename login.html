@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie | Qeoresearch #9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="centered-layout">
+    <div class="login-card">
+        <div class="logo">Qeoresearch <span class="accent">#9</span></div>
+        <h2>Panel Autoryzacji</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Identyfikator wejściowy</label>
+                <input type="text" id="username" required placeholder="np. hank-devz" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Klucz dostępu</label>
+                <input type="password" id="password" required placeholder="••••••••">
+            </div>
+            <div id="login-error" class="error-msg hidden">Niepoprawne dane uwierzytelniające.</div>
+            <button type="submit" class="btn-primary full-width">Autoryzuj</button>
+        </form>
+        <p class="back-link"><a href="index.html">&larr; Powrót do strony głównej</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
