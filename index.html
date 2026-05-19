@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qeoresearch | Project #9 - Micrograd JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Qeoresearch <span class="accent">#9</span></div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="login.html" class="btn-login">Panel Inżyniera</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Micrograd Engine Demonstration</h1>
+            <p class="subtitle">Minimalistyczny silnik automatycznego różniczkowania (Autograd) napisany w czystym JavaScript na potrzeby badań Qeoresearch.</p>
+        </section>
+
+        <section class="demo-section">
+            <h2>Wizualizacja Grafu Obliczeniowego</h2>
+            <p>Poniższy panel demonstruje forward i backward pass dla podstawowej operacji: $$f(x, w) = x \cdot w + b$$</p>
+            
+            <div class="interactive-demo">
+                <div class="inputs">
+                    <label>Wejście (x): <input type="number" id="input-x" value="2.0" step="0.1"></label>
+                    <label>Waga (w): <input type="number" id="input-w" value="-3.0" step="0.1"></label>
+                    <label>Bias (b): <input type="number" id="input-b" value="6.7" step="0.1"></label>
+                    <button id="run-grad-btn" class="btn-primary">Uruchom Backward Pass</button>
+                </div>
+
+                <div class="graph-output">
+                    <h3>Wyniki w czasie rzeczywistym:</h3>
+                    <div id="output-log">Kliknij przycisk, aby uruchomić silnik.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Qeoresearch. Realizacja: <a href="https://github.com/hank-devz" target="_blank">hank-devz</a>. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
